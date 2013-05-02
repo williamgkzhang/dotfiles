@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/william_zhang/Projects/Newsbeat/app'
+let g:netrw_dirhist_2='/Users/william_zhang/Projects/SchumacherGroupdotCom/config'
+let g:netrw_dirhist_3='/Users/william_zhang/Projects/Newsbeat/config'
+let g:netrw_dirhist_4='/Users/william_zhang/Projects/sgapps/vendor/testplugin'
