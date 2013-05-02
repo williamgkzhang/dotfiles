@@ -18,7 +18,6 @@ source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powe
 
 function SetSpaceIndentation()
 	let g:cindentation = "spaces"
-	echo "Space Indentation"
 	set sw=2
 	set ts=2
 	set expandtab
@@ -27,7 +26,6 @@ endfunction
 
 function SetTabIndentation()
 	let g:cindentation = "tabs"
-	echo "Tab Indentation"
 	set sw=3
 	set ts=3
 	set noexpandtab
@@ -37,8 +35,10 @@ endfunction
 function ToggleIndentation()
 	if g:cindentation == "tabs"
 		call SetSpaceIndentation()
+		echo "Space Indentation"
 	else
 		call SetTabIndentation()
+		echo "Tab Indentation"
 	endif
 endfunction
 
