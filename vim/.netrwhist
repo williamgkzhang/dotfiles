@@ -1,6 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/william_zhang/Projects/Newsbeat/app'
 let g:netrw_dirhist_2='/Users/william_zhang/Projects/SchumacherGroupdotCom/config'
 let g:netrw_dirhist_3='/Users/william_zhang/Projects/Newsbeat/config'
 let g:netrw_dirhist_4='/Users/william_zhang/Projects/sgapps/vendor/testplugin'
+let g:netrw_dirhist_5='/Users/william_zhang/Projects/EmployeePortal'
+let g:netrw_dirhist_6='/Users/william_zhang/Projects/DepartmentPortals/template-portal/app'
+let g:netrw_dirhist_7='/Users/william_zhang/Projects/DepartmentPortals/template-portal/config'
+let g:netrw_dirhist_8='/Users/william_zhang/Projects/Utilities/sg-ruby-utilities/lib/sgutil'

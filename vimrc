@@ -1,8 +1,6 @@
 :set number
-:colorscheme railscasts
 :set autoindent
 :syntax enable
-:filetype on
 :set nocompatible
 :set nowrap
 :set backspace=2
@@ -13,8 +11,59 @@ map <F3> :call ToggleIndentation()<CR>
 
 set guifont=Inconsolata\ for\ Powerline:h18
 
-execute pathogen#infect()
-source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+"Bundle"
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+Bundle 'itchyny/lightline.vim'
+Bundle 'Syntastic'
+Bundle 'scrooloose/nerdtree'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-fugitive'
+
+" Colorschemes
+Bundle 'nanotech/jellybeans.vim' 
+Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Bundle 'tomasr/molokai' 
+
+
+filetype plugin indent on
+
+colorscheme jellybeans
+let g:lightline = {
+ \ 'colorscheme': 'jellybeans',
+ \ 'active': {
+ \ 	'left': [ [ 'mode', 'paste'],
+ \			[ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+ \ },
+ \ 'component_function': {
+ \		'fugitive': 'MyFugitive'
+ \ },
+ \ 'component': {
+ \		'readonly': '%{&filetype=="help"?"":&readonly?"ReadOnly":""}',
+ \		'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}'
+ \ },
+ \ 'component_visible_condition': {
+ \		'readonly': '(&filetype!="help"&& &readonly)',
+ \		'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
+ \ },
+ \ 'separator': { 'left': '', 'right': '' },
+ \ 'subseparator': { 'left': '', 'right': '' }
+ \ }
+
+function! MyFugitive()
+  if exists("*fugitive#head")
+    let _ = fugitive#head()
+    return strlen(_) ? ' '._ : ''
+  endif
+  return ''
+endfunction
+
+
 
 function SetSpaceIndentation()
 	let g:cindentation = "spaces"
