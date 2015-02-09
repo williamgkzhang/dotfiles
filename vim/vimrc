@@ -8,6 +8,7 @@ map <F2> :NERDTreeToggle<CR>
 map <F3> :call ToggleIndentation()<CR>
 :let g:indent_guide_guide_size=1
 :set laststatus=2
+:set directory=~/vimtmp
 
 set guifont=Inconsolata\ for\ Powerline:h18
 
@@ -20,20 +21,27 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 Bundle 'itchyny/lightline.vim'
-Bundle 'Syntastic'
+" Bundle 'Syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-vinegar'
+Bundle 'tpope/vim-surround'
+Bundle 'kien/ctrlp.vim'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'dbext.vim'
+Bundle 'yggdroot/indentLine'
 
 " Colorschemes
 Bundle 'nanotech/jellybeans.vim' 
-Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Bundle 'chriskempson/base16-vim'
 Bundle 'tomasr/molokai' 
 
 
 filetype plugin indent on
 
-colorscheme jellybeans
+colorscheme base16-default
+set bg=dark
 let g:lightline = {
  \ 'colorscheme': 'jellybeans',
  \ 'active': {
@@ -91,4 +99,12 @@ function ToggleIndentation()
 	endif
 endfunction
 
+
+let g:cindentation = "tabs"
+set sw=3
+set ts=3
+set noexpandtab
+set nosmarttab
+
 call SetTabIndentation()
+
