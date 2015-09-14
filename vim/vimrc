@@ -24,7 +24,7 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 Bundle 'itchyny/lightline.vim'
-Bundle 'Syntastic'
+" Bundle 'Syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-fugitive'
@@ -35,6 +35,8 @@ Bundle "pangloss/vim-javascript"
 Bundle 'mxw/vim-jsx'
 Bundle 'wavded/vim-stylus'
 Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-surround'
+Bundle 'yggdroot/indentLine'
 
 " Colorschemes
 Bundle 'nanotech/jellybeans.vim' 
@@ -106,6 +108,13 @@ function ToggleIndentation()
 		echo "Tab Indentation"
 	endif
 endfunction
+
+
+let g:cindentation = "tabs"
+set sw=3
+set ts=3
+set noexpandtab
+set nosmarttab
 
 call SetTabIndentation()
 set guifont=Hack:14
