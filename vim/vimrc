@@ -17,32 +17,32 @@ nnoremap <leader>i :call ToggleIndentation()<CR>
 
 "Bundle"
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
-Bundle 'itchyny/lightline.vim'
-" Bundle 'Syntastic'
-Bundle 'scrooloose/nerdtree'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-haml'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'mtscout6/vim-cjsx'
-Bundle "pangloss/vim-javascript"
-Bundle 'mxw/vim-jsx'
-Bundle 'wavded/vim-stylus'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'yggdroot/indentLine'
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'itchyny/lightline.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-haml'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'mtscout6/vim-cjsx'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'wavded/vim-stylus'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'yggdroot/indentLine'
 
 " Colorschemes
-Bundle 'nanotech/jellybeans.vim' 
-Bundle 'chriskempson/base16-vim'
-Bundle 'tomasr/molokai' 
-Bundle 'mustache/vim-mustache-handlebars'
+Plugin 'nanotech/jellybeans.vim' 
+Plugin 'chriskempson/base16-vim'
+Plugin 'tomasr/molokai' 
+Plugin 'mustache/vim-mustache-handlebars'
+call vundle#end()
 
 
 filetype plugin indent on
