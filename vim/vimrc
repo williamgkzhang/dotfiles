@@ -1,5 +1,6 @@
 :set number
 :set autoindent
+:set smartindent
 :syntax enable
 :set nocompatible
 :set nowrap
@@ -13,7 +14,6 @@ nnoremap <leader>i :call ToggleIndentation()<CR>
 
 :set directory=~/.vimtmp//
 
-set guifont=Inconsolata\ for\ Powerline:h18
 
 "Bundle"
 filetype off
@@ -30,16 +30,22 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-haml'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'mtscout6/vim-cjsx'
+Bundle "pangloss/vim-javascript"
+Bundle 'mxw/vim-jsx'
+Bundle 'wavded/vim-stylus'
+Bundle 'kien/ctrlp.vim'
 
 " Colorschemes
 Bundle 'nanotech/jellybeans.vim' 
 Bundle 'chriskempson/base16-vim'
 Bundle 'tomasr/molokai' 
+Bundle 'mustache/vim-mustache-handlebars'
 
 
 filetype plugin indent on
 
-colorscheme base16-ocean
+colorscheme base16-railscasts
 set background=dark
 let g:lightline = {
  \ 'colorscheme': 'jellybeans',
@@ -61,6 +67,7 @@ let g:lightline = {
  \ 'separator': { 'left': '', 'right': '' },
  \ 'subseparator': { 'left': '', 'right': '' }
  \ }
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp)|(\.(swp|ico|git|svn))$'
 
 function! MyFugitive()
   if exists("*fugitive#head")
@@ -101,3 +108,5 @@ function ToggleIndentation()
 endfunction
 
 call SetTabIndentation()
+set guifont=Hack:14
+

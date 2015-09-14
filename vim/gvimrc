@@ -1,1 +1,2 @@
 set antialias
+set guifont=Hack:h14
