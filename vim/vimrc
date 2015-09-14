@@ -97,7 +97,6 @@ function SetTabIndentation()
 	set nosmarttab
 endfunction
 
-set sw=3 ts=3 noexpandtab nosmarttab
 
 function ToggleIndentation()
 	if g:cindentation == "tabs"
@@ -111,10 +110,10 @@ endfunction
 
 
 let g:cindentation = "tabs"
-set sw=3
-set ts=3
-set noexpandtab
-set nosmarttab
+set sw=3 ts=3 noexpandtab nosmarttab
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 
 call SetTabIndentation()
 set guifont=Hack:14
