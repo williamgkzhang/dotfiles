@@ -29,5 +29,6 @@ exports.configuration = {
     "ui.animations.enabled": true,
     "ui.fontSmoothing": "auto",
     "oni.useDefaultConfig": false,
-    "oni.loadInitVim": true
+    "oni.loadInitVim": true,
+    "sidebar.enabled": false,
 };
